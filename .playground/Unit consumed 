@@ -1,0 +1,58 @@
+#include<stdio.h>
+function to calculate the bill based on unit consumed 
+floacalculateBill(init unit){
+float charge_per_unit;
+float total _bill;
+//Determine charges per unit based on unit consumed 
+if (unit<=199){
+charge_per_unit=1.20;
+}else if(unit>=200&& unit<400){
+charge_per_unit=1.50;
+}else if(unit>=400 && units<600){
+charge_per_unit=2.00;
+}
+//calculate the initial bill amount 
+total _bill=units*
+charge_per_units;
+//apply a 15%surcharge if  bill exceeds 400ksh
+if(total _bill>400){
+total_bill+=total_bill*0.15;//adding 15%surcharge
+}
+//ensure the minimum bill is 100ksh
+if(total_bill<100){
+total_bill=100;
+}
+return total_bill;//return final calculated bill
+}
+int main(){
+int customer_id,unit consumed;
+char customer_name[50];
+float charge_per_unit, total_amount;
+//prompt the user for input 
+printf("Enter customer ID:");
+scanf("%d", & customer _id);
+printf("Enter customer _ Name");
+scanf("%s", customer_ name);
+printf("Enter units Consumed:");
+scanf("%d",& units_consumed);
+//calculate total pay using the calculatedbill function 
+total_amount=calculateBill(units_consumed);
+//determine charge per unit based on unit consumed 
+if(unit_consumed<=199){
+charge_per_unit=1.20;
+}else if(unit_consumed>=200 && units _consumed<400){
+charge_per_unit=1.50;
+}else if(unit_consumed>=400 && units_consumed<600){
+charge_per_unit=1.80;
+} else {
+charge_per_unit=2.00;
+}
+//display electricity bill 
+printf("\n.... electricity Bill... \n",);
+printf("customer ID:%d\n", customer_id);
+printf("customer Name:%s\n",customer_name);
+printf("units Consumed %d\n",: units_consumed);
+printf("charges per unit:%.2fksh\n", charge_per_unit);
+printf(""total Amount to pay:%.2fksh\n", total_amount);
+return 0;
+}
